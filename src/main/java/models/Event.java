@@ -9,9 +9,7 @@ public class Event {
     Map<Integer, Integer> drinksCost = new HashMap<Integer, Integer>();
     Map<Integer, Integer> entertainmentCost = new HashMap<Integer, Integer>();
 
-    public int planner (int numGuests){
-        return numGuests;
-    }
+
     public int costOfGuest (int numGuests){
         int costOfGuests = numGuests *12;
         return costOfGuests;
