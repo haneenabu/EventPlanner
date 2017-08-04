@@ -62,7 +62,8 @@ public class Event {
             total += couponCode.get(coupon);
             return total;
         }else if (coupon.equals(2)){
-            return 1;
+            total = total - (int)(total*(couponCode.get(coupon))/100.0f);
+            return total;
         }else{
             return 1;
         }
