@@ -5,7 +5,7 @@ package models;
  */
 public class Event {
     public int planner (int numGuests){
-
         return numGuests;
     }
+
 }
