@@ -30,12 +30,17 @@ public class EventTest {
         assertEquals(500, testEvent.calculateFoodCost(1));
     }
     @Test
-    public void newEvent_CalculateDrinksCost_1(){
+    public void newEvent_CalculateDrinksCost_0(){
         Event testEvent = new Event();
         assertEquals(1, testEvent.calculateDrinksCost(0));
     }
     @Test
-    public void newEvent_CalculateEntertainmentCost_1(){
+    public void newEvent_CalculateDrinksCost_1(){
+        Event testEvent = new Event();
+        assertEquals(260, testEvent.calculateDrinksCost(0));
+    }
+    @Test
+    public void newEvent_CalculateEntertainmentCost_0(){
         Event testEvent = new Event();
         assertEquals(1, testEvent.calculateEntertainmentCost(0));
     }
