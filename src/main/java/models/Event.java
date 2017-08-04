@@ -11,4 +11,7 @@ public class Event {
     public int calculateFoodCost(int foodChoice) {
         return 1;
     }
+    public int calculateDrinksCost(int drinkChoice){
+        return 1;
+    }
 }
