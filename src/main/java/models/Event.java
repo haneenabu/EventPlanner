@@ -38,7 +38,7 @@ public class Event {
         drinksCost.put(4, 200);
         drinksCost.put(5, 350);
 
-        if (drinkChoice.equals(1)){
+        if (drinkChoice.equals(1)|| drinkChoice.equals(2)|| drinkChoice.equals(3)|| drinkChoice.equals(4)|| drinkChoice.equals(5)){
             int drinksValue = drinksCost.get(drinkChoice);
             return drinksValue;
         }else{
