@@ -20,7 +20,10 @@ public class App {
             System.in.read(); //wait for the user to select any key before displaying more options
 
             //Food Price
-            System.out.println("Choose one of the following food options: " + '\n' + "1. Italian Cuisine" + '\n' + "2. Asian Fusion" + '\n' + "3. Mediterranean");
+            System.out.println("Choose one of the following food options: " + '\n' + "1. Italian Cuisine" + '\n' + "2. Asian Fusion" + '\n' + "3. Mediterranean Grill" + '\n' + "4. All American" + '\n' + "5. Indian Experience");
+            int foodChoiceInput = Integer.parseInt(bufferedReader.readLine());
+            finalCost += event.calculateFoodCost(foodChoiceInput);
+            System.out.println('\n' + "Your total cost for food option " +foodChoiceInput+ " and " +guestNumInput + " guest(s) is $" +finalCost + ".");
         }catch (IOException e){
            e.printStackTrace();
         }
