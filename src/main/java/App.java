@@ -16,10 +16,11 @@ public class App {
             int guestNumInput = Integer.parseInt(bufferedReader.readLine());
             Event event = new Event();
             int finalCost = event.costOfGuest(guestNumInput);
-            System.out.println("You cost for " + guestNumInput+ " guests would amount to $" + finalCost);
+            System.out.println("Your cost for " + guestNumInput+ " guests would amount to $" + finalCost +"." + '\n' + "Select any key to continue.");
+            System.in.read(); //wait for the user to select any key before displaying more options
 
             //Food Price
-
+            System.out.println("Choose one of the following food options: " + '\n' + "1. Italian Cuisine" + '\n' + "2. Asian Fusion" + '\n' + "3. Mediterranean");
         }catch (IOException e){
            e.printStackTrace();
         }
