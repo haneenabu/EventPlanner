@@ -14,4 +14,7 @@ public class Event {
     public int calculateDrinksCost(int drinkChoice){
         return 1;
     }
+    public int calculateEntertainmentCost(int drinkChoice){
+        return 1;
+    }
 }
