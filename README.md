@@ -16,12 +16,12 @@ _This website will prompt the user for event detail selections. It will then ana
 * _The program will test passing a string to a method and returning true_
   * _Expected: true_
   * _Output: true_
-* _The program will test passing a string to a method and returning a value_
-  * _Expected: 1_
-  * _Output: 1_
-* _The program will take a string people and get its matching value from a hashmap_
-  * _Expected: 1_
-  * _Output: 1_
+* _The program will test passing an int to a method and returning a value_
+  * _Expected: 10_
+  * _Output: 12_
+* _The program will take a int people and get its matching value from a hashmap_
+  * _Expected: 10_
+  * _Output: 120_
 * _The program will take a string food and get its matching value from a hashmap from another method_
   * _Expected: 1_
   * _Output: 1_
@@ -43,7 +43,7 @@ _This website will prompt the user for event detail selections. It will then ana
 
 ## Known Bugs
 
-_None at this time_
+_Cannot return exact decimal value after percentage coupon is applied, instead returns a rounded up number_
 
 ## Support and contact details
 
