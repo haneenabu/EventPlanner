@@ -47,11 +47,16 @@ public class EventTest {
     @Test
     public void newEvent_CalculateCoupon_850(){
         Event testEvent = new Event();
-        assertEquals(850, testEvent.calculateCoupon(900, 1));
+        assertEquals(850, testEvent.calculateCoupon(900,  1));
     }
     @Test
     public void newEvent_CalculateCoupon_800(){
         Event testEvent = new Event();
-        assertEquals(800, testEvent.calculateCoupon(1000, 2));
+        assertEquals(800, testEvent.calculateCoupon( 1000,  2));
+    }
+    @Test
+    public void newEvent_CalculateCoupon_float(){
+        Event testEvent = new Event();
+        assertEquals(349, testEvent.calculateCoupon(436,  2));
     }
 }
