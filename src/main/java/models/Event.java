@@ -23,7 +23,7 @@ public class Event {
         foodCost.put(3, 600);
         foodCost.put(4, 575);
         foodCost.put(5, 650);
-        if(foodChoice.equals(1)) {
+        if(foodChoice.equals(1) || foodChoice.equals(2) || foodChoice.equals(3) || foodChoice.equals(4) || foodChoice.equals(5)) {
             int foodValue = foodCost.get(foodChoice);
             return foodValue;
         }else{
