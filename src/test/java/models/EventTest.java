@@ -55,7 +55,7 @@ public class EventTest {
         assertEquals(800, testEvent.calculateCoupon( 1000,  2));
     }
     @Test
-    public void newEvent_CalculateCoupon_float(){
+    public void newEvent_CalculateCoupon_percentRounded(){
         Event testEvent = new Event();
         assertEquals(349, testEvent.calculateCoupon(436,  2));
     }

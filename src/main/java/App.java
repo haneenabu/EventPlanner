@@ -43,6 +43,18 @@ public class App {
                 System.out.println('\n' + "Your total cost for entertainment option " + entertainmentChoice + ", drink option "+ drinkChoice + ", food option " +foodChoiceInput+ " and " +guestNumInput + " guest(s) is $" +finalCost + "." + '\n' + "Select the Enter key to continue.");
                 System.in.read();
 
+                //Apply Coupons
+                System.out.println("Would you like to checkout our current coupons (Yes | No)?");
+                String coupon = bufferedReader.readLine();
+                if (coupon.equals("Yes")){
+                    System.out.println("Here are our current options:" + '\n' + "1. $100 off your entire package of $1000 or more!" +'\n' + "2. 20% off your package of 2,000 or more" +'\n' + "Please enter the corresponding number: ");
+                    Integer couponChoice = Integer.parseInt(bufferedReader.readLine());
+                    if (couponChoice.equals(1) && finalCost >= 1000){
+                        finalCost = event.calculateCoupon(finalCost, couponChoice);
+                        System.out.println("That worked! Your new total is $" + finalCost);
+                    }
+                }
+
                 System.out.println("Would you like to try again (Yes | No)? ");
                 again = bufferedReader.readLine();
             } while (again.equals("Yes"));

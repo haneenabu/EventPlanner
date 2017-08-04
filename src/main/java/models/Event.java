@@ -55,7 +55,7 @@ public class Event {
         }
     }
     public int calculateCoupon (Integer total, Integer coupon){
-        couponCode.put(1, -50);
+        couponCode.put(1, -100);
         couponCode.put(2, 20);
 
         if (coupon.equals(1)){
