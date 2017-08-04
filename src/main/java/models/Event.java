@@ -8,7 +8,7 @@ public class Event {
         int costOfGuests = numGuests *12;
         return costOfGuests;
     }
-    public int calculateFoodCost(int foodChoice){
+    public int calculateFoodCost(int foodChoice) {
         return 1;
     }
 }
