@@ -15,7 +15,7 @@ public class App {
         System.out.println("Welcome to Haneen's Event Planning Service!" + '\n' + "You will be prompted with a few event options to get you an accurate event quote!" + '\n');
         try{
             String again;
-            String couponAgain = "";
+            String couponAgain;
 
             do{
                 //Guest Price
@@ -27,18 +27,30 @@ public class App {
                 System.in.read(); //wait for the user to select any key before displaying more options
 
                 //Food Price
+
                 System.out.println("Choose one of the following food options, by entering the corresponding number: " + '\n' + "1. Italian Cuisine" + '\n' + "2. Asian Fusion" + '\n' + "3. Mediterranean Grill" + '\n' + "4. All American" + '\n' + "5. Indian Experience");
-                int foodChoiceInput = Integer.parseInt(bufferedReader.readLine());
-                finalCost += event.calculateFoodCost(foodChoiceInput);
-                System.out.println('\n' + "Your total cost for food option " +foodChoiceInput+ " and " +guestNumInput + " guest(s) is $" +finalCost + "."+ '\n' + "Select the Enter key to continue.");
-                System.in.read();
+
+                Integer foodChoiceInput = Integer.parseInt(bufferedReader.readLine());
+
+                if (foodChoiceInput.equals(1) || foodChoiceInput.equals(2) || foodChoiceInput.equals(3) || foodChoiceInput.equals(4) || foodChoiceInput.equals(5)) {
+                    finalCost += event.calculateFoodCost(foodChoiceInput);
+                    System.out.println('\n' + "Your total cost for food option " + foodChoiceInput + " and " + guestNumInput + " guest(s) is $" + finalCost + "." + '\n' + "Select the Enter key to continue.");
+                    System.in.read();
+                } else {
+                    System.out.println("You entered an invalid input");
+                    break;
+                }
+
 
                 //Drinks Price
                 System.out.println("Choose one of the following drink options, by entering the corresponding number: " + '\n' + "1. Italian Sodas" + '\n' + "2. Thai Tea" + '\n' + "3. Mint Lemonade" + '\n' + "4. Soda Assortments" + '\n' + "5. Chai and Lemon Water");
-                int drinkChoice = Integer.parseInt(bufferedReader.readLine());
+                Integer drinkChoice = Integer.parseInt(bufferedReader.readLine());
+
+
                 finalCost += event.calculateDrinksCost(drinkChoice);
-                System.out.println('\n' + "Your total cost for drink option "+ drinkChoice + ", food option " +foodChoiceInput+ " and " +guestNumInput + " guest(s) is $" +finalCost + "." + '\n' + "Select the Enter key to continue.");
+                System.out.println('\n' + "Your total cost for drink option " + drinkChoice + ", food option " + foodChoiceInput + " and " + guestNumInput + " guest(s) is $" + finalCost + "." + '\n' + "Select the Enter key to continue.");
                 System.in.read();
+
 
                 //Entertainment Price
                 System.out.println("Choose one of the following entertainment options, by entering the corresponding number: " + '\n' + "1. DJ" + '\n' + "2. Live Band" + '\n' + "3. No Entertainment/You will provide your own");
@@ -86,9 +98,6 @@ public class App {
                 System.out.println("Would you like to try get another event quote (Yes | No)? ");
                 again = bufferedReader.readLine();
             } while (again.equals("Yes"));
-
-
-
 
         }catch (IOException e){
            e.printStackTrace();
