@@ -23,6 +23,7 @@ public class Event {
         foodCost.put(3, 600);
         foodCost.put(4, 575);
         foodCost.put(5, 650);
+
         return 1;
     }
     public int calculateDrinksCost(int drinkChoice){
