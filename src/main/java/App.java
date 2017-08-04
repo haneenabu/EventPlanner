@@ -8,11 +8,15 @@ import java.io.InputStreamReader;
  * Created by Guest on 8/4/17.
  */
 public class App {
+
+
     public static void main(String[] args) {
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
         System.out.println("Welcome to Haneen's Event Planning Service!" + '\n' + "You will be prompted with a few event options to get you an accurate event quote!" + '\n');
         try{
             String again;
+            String couponAgain = "";
+
             do{
                 //Guest Price
                 System.out.println("Enter the number of your expected attendees: ");
@@ -44,18 +48,46 @@ public class App {
                 System.in.read();
 
                 //Apply Coupons
-                System.out.println("Would you like to checkout our current coupons (Yes | No)?");
-                String coupon = bufferedReader.readLine();
-                if (coupon.equals("Yes")){
-                    System.out.println("Here are our current options:" + '\n' + "1. $100 off your entire package of $1000 or more!" +'\n' + "2. 20% off your package of 2,000 or more" +'\n' + "Please enter the corresponding number: ");
-                    Integer couponChoice = Integer.parseInt(bufferedReader.readLine());
-                    if (couponChoice.equals(1) && finalCost >= 1000){
-                        finalCost = event.calculateCoupon(finalCost, couponChoice);
-                        System.out.println("That worked! Your new total is $" + finalCost);
-                    }
-                }
+                do {
+                    System.out.println("Would you like to checkout our current coupons (Yes | No)?");
+                    String coupon = bufferedReader.readLine();
+                    if (coupon.equals("Yes")){
+                        System.out.println("Here are our current options:" + '\n' + "1. $100 off your entire package of $1000 or more!" +'\n' + "2. 20% off your package of 2,000 or more" +'\n' + "Please enter the corresponding number: ");
+                        Integer couponChoice = Integer.parseInt(bufferedReader.readLine());
+                        if (couponChoice.equals(1) && finalCost >= 1000){
+                            finalCost = event.calculateCoupon(finalCost, couponChoice);
+                            System.out.println("That worked! Your new total is $" + finalCost);
+                        }else if (couponChoice.equals(1) && finalCost < 1000){
+                            System.out.println("Sorry this coupon cannot be applied since your total is less than $1000.");
+                            System.out.println("Would you like to try again (Yes | No)? ");
+                            couponAgain = bufferedReader.readLine();
+                        }else if (couponChoice.equals(2) && finalCost >= 2000){
+                            finalCost = event.calculateCoupon(finalCost, couponChoice);
+                            System.out.println("That worked! Your new total is $" + finalCost);
+                        }else if (couponChoice.equals(2) && finalCost < 2000){
+                            System.out.println("Sorry this coupon cannot be applied since your total is less than $2000.");
+                            System.out.println("Would you like to try again (Yes | No)? ");
+                            couponAgain = bufferedReader.readLine();
+                        } else{
+                            System.out.println("Invalid Input");
+                            System.out.println("Would you like to try again (Yes | No)? ");
+                            couponAgain = bufferedReader.readLine();
+                        }
 
-                System.out.println("Would you like to try again (Yes | No)? ");
+                    } else if (coupon.equals("No")){
+
+                    }else{
+                        System.out.println("Sorry you did not enter a valid choice.");
+                        System.out.println("Would you like to try again (Yes | No)? ");
+                        couponAgain = bufferedReader.readLine();
+                    }
+
+                } while (couponAgain.equals("Yes"));
+
+
+
+
+                System.out.println("Would you like to try get another event quote (Yes | No)? ");
                 again = bufferedReader.readLine();
             } while (again.equals("Yes"));
 
