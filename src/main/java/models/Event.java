@@ -50,7 +50,11 @@ public class Event {
         entertainmentCost.put(1, 900);
         entertainmentCost.put(2, 2000);
         entertainmentCost.put(3, 0);
-
-        return 1;
+        if(entertainmentChoice.equals(1) || entertainmentChoice.equals(2) || entertainmentChoice.equals(3)){
+            int entertainmentValue = entertainmentCost.get(entertainmentChoice);
+            return entertainmentValue;
+        } else{
+            return 1;
+        }
     }
 }
