@@ -54,4 +54,7 @@ public class Event {
             return 1;
         }
     }
+    public int calculateCoupon (Integer coupon){
+        return 1;
+    }
 }
