@@ -54,7 +54,18 @@ public class Event {
             return 1;
         }
     }
-    public int calculateCoupon (Integer coupon){
-        return 1;
+    public int calculateCoupon (Integer total, Integer coupon){
+        couponCode.put(1, -50);
+        couponCode.put(2, 20);
+
+        if (coupon.equals(1)){
+            total += couponCode.get(coupon);
+            return total;
+        }else if (coupon.equals(2)){
+            return 1;
+        }else{
+            return 1;
+        }
+
     }
 }
