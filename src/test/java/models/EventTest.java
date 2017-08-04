@@ -19,4 +19,9 @@ public class EventTest {
         Event testEvent = new Event();
         assertEquals(120, testEvent.costOfGuest(10));
     }
+    @Test
+    public void newEvent_CalculateFoodCost_1(){
+        Event testEvent = new Event();
+        assertEquals(1, testEvent.calculateFoodCost(1));
+    }
 }
