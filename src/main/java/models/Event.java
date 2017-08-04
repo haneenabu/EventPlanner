@@ -35,6 +35,10 @@ public class Event {
         return 1;
     }
     public int calculateEntertainmentCost(int drinkChoice){
+        entertainmentCost.put(1, 900);
+        entertainmentCost.put(2, 2000);
+        entertainmentCost.put(3, 0);
+
         return 1;
     }
 }
