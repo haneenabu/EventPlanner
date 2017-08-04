@@ -31,16 +31,22 @@ public class Event {
         }
 
     }
-    public int calculateDrinksCost(int drinkChoice){
+    public int calculateDrinksCost(Integer drinkChoice){
         drinksCost.put(1, 260);
         drinksCost.put(2, 300);
         drinksCost.put(3, 320);
         drinksCost.put(4, 200);
         drinksCost.put(5, 350);
 
-        return 1;
+        if (drinkChoice.equals(1)){
+            int drinksValue = drinksCost.get(drinkChoice);
+            return drinksValue;
+        }else{
+            return 1;
+        }
     }
-    public int calculateEntertainmentCost(int drinkChoice){
+
+    public int calculateEntertainmentCost(Integer entertainmentChoice){
         entertainmentCost.put(1, 900);
         entertainmentCost.put(2, 2000);
         entertainmentCost.put(3, 0);

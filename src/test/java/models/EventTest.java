@@ -37,7 +37,7 @@ public class EventTest {
     @Test
     public void newEvent_CalculateDrinksCost_1(){
         Event testEvent = new Event();
-        assertEquals(260, testEvent.calculateDrinksCost(0));
+        assertEquals(260, testEvent.calculateDrinksCost(1));
     }
     @Test
     public void newEvent_CalculateEntertainmentCost_0(){
