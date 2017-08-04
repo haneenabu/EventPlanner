@@ -12,6 +12,6 @@ public class EventTest {
     @Test
     public void newEvent_PlannerMethod_true(){
         Event testEvent = new Event();
-        assertEquals(true, testEvent.planner(10));
+        assertEquals(10, testEvent.planner(10));
     }
 }
