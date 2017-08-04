@@ -8,7 +8,7 @@ public class Event {
     Map<Integer, Integer> foodCost = new HashMap<Integer, Integer>();
     Map<Integer, Integer> drinksCost = new HashMap<Integer, Integer>();
     Map<Integer, Integer> entertainmentCost = new HashMap<Integer, Integer>();
-
+    Map<Integer, Integer> couponCode = new HashMap<Integer, Integer>();
 
     public int costOfGuest (int numGuests){
         int costOfGuests = numGuests *12;
