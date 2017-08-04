@@ -9,4 +9,9 @@ public class EventTest {
         Event testEvent = new Event();
         assertEquals(true, testEvent instanceof Event);
     }
+    @Test
+    public void newEvent_PlannerMethod_true(){
+        Event testEvent = new Event();
+        assertEquals(true, testEvent.planner(10));
+    }
 }
