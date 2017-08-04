@@ -17,14 +17,19 @@ public class Event {
         int costOfGuests = numGuests *12;
         return costOfGuests;
     }
-    public int calculateFoodCost(int foodChoice) {
+    public int calculateFoodCost(Integer foodChoice) {
         foodCost.put(1, 500);
         foodCost.put(2, 550);
         foodCost.put(3, 600);
         foodCost.put(4, 575);
         foodCost.put(5, 650);
+        if(foodChoice.equals(1)) {
+            int foodValue = foodCost.get(foodChoice);
+            return foodValue;
+        }else{
+            return 1;
+        }
 
-        return 1;
     }
     public int calculateDrinksCost(int drinkChoice){
         drinksCost.put(1, 260);
